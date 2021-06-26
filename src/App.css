@@ -9,24 +9,3 @@
   'h h'
   'n c';
 }
-
-
-.header {
-  grid-area: h;
-  background-color: greenyellow;
-}
-
-.nav {
-  grid-area: n;
-  background-color: grey;
-}
-
-.nav div a{
-  color: white;
-  text-decoration: none;
-}
-
-.content {
-  grid-area: c;
-  background-color: goldenrod;
-}
