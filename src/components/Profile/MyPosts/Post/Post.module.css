@@ -1,0 +1,37 @@
+.item{
+    color:white;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+}
+
+.item img{
+    width: 60px;
+    vertical-align: middle;
+    border-radius: 50px;
+}
+
+.item .user_post{
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.item .user{
+    margin: 0 auto;
+    text-align: center;
+    width: 90px;
+    margin-right: 10px;
+    word-wrap:break-word;
+}
+
+.like{
+    color: gray;
+    cursor: pointer;
+}
+
+.like.active{
+    color: hotpink;
+}
+
+.like_sum{
+    color: black;
+}
