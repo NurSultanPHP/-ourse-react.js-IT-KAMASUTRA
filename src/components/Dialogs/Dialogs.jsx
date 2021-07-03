@@ -3,39 +3,43 @@ import React from "react";
 import classes from "./Dialogs.module.css";
 import { NavLink } from 'react-router-dom';
 
+const DialogItem = (props) => {
+    
+    let path = "/dialogs/"+props.slug;
+
+    return (
+        <div className={classes.dialog}>
+            <NavLink to={path} activeClassName={classes.active}>{props.author}</NavLink>
+        </div>
+    );
+};
+
+const Message = (props) => {
+    return (
+        <div className={classes.message}>{props.message}</div>
+    );
+};
+
 const Dialogs = (props) => {
     return(
         <div className={classes.dialogs}>
             <div className={classes.dialogs_items}>
-                <div className={classes.dialog}>
-                    <NavLink to="/dialogs/Dimych" activeClassName={classes.active}>Dimych</NavLink>
-                </div>
 
-                <div className={classes.dialog}>
-                    <NavLink to="/dialogs/Andrey" activeClassName={classes.active}>Andrey</NavLink>
-                </div>
-
-                <div className={classes.dialog}>
-                    <NavLink to="/dialogs/Sveta" activeClassName={classes.active}>Sveta</NavLink>
-                </div>
-
-                <div className={classes.dialog}>
-                    <NavLink to="/dialogs/Sasha" activeClassName={classes.active}>Sasha</NavLink>
-                </div>
-
-                <div className={classes.dialog}>
-                    <NavLink to="/dialogs/Vicktor" activeClassName={classes.active}>Vicktor</NavLink>
-                </div>
-
-                <div className={classes.dialog}>
-                    <NavLink to="/dialogs/Valera" activeClassName={classes.active}>Valera</NavLink>
-                </div>
+                <DialogItem author="Dimych" slug="Dimych"/>
+                
+                <DialogItem author="Sveta" slug="Sveta"/>
+                
+                <DialogItem author="Sasha" slug="Sasha"/>
+                
+                <DialogItem author="Vicktor" slug="Vicktor"/>
+                
+                <DialogItem author="Valera" slug="Valera"/>
             </div>
 
             <div className={classes.messages}>
-                <div className={classes.message}>Hi</div>
-                <div className={classes.message}>How is your it-kamasutra?</div>
-                <div className={classes.message}>Yo</div>
+                <Message message="Hi"/>
+                <Message message="Hello"/>
+                <Message message="How are you?"/>
             </div>
 
         </div>
